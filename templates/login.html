@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firefighter Login</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://em-content.zobj.net/thumbs/120/google/350/firefighter_1f9d1-200d-1f692.png" alt="Firefighter" class="icon">
+            <h1>For FireFighter</h1>
+        </div>
+        <div class="login-form">
+            <form method="POST" action="/login">
+                <label for="id">ID</label>
+                <input type="text" id="id" name="id" placeholder="Enter your ID" required>
+                
+                <label for="password">PW</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                
+                <button type="submit">Log in</button>
+            </form>
+            {% if error %}
+            <p class="error">{{ error }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
