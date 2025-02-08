@@ -85,7 +85,6 @@ def train_model(model, criterion, optimizer, num_epochs=10):
 
     return model
 
-# if __name__ == '__main__': 추가
 if __name__ == '__main__':
     # 모델 학습
     model = train_model(model, criterion, optimizer, num_epochs=10)
