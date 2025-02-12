@@ -1,3 +1,8 @@
+#확률 계산 방식(softmax 후 probabilities[0][preds.item()].item() 사용)
+#분류 결과 반환((class_names[preds.item()], confidence))
+#확률이 0.8 미만일 때(여전히 클래스 예측을 수행하나 화면에 표시 안 함)
+#코드 간결성(if confidence >= 0.8:로 직접 필터링)
+
 import torch
 import cv2
 import numpy as np
@@ -33,8 +38,10 @@ def classify_image(image):
     with torch.no_grad():
         outputs = model(image)
         _, preds = torch.max(outputs, 1)
+        probabilities = torch.nn.functional.softmax(outputs, dim=1)
+        confidence = probabilities[0][preds.item()].item()
 
-    return class_names[preds.item()]
+    return class_names[preds.item()], confidence
 
 # 웹캠 열기
 cap = cv2.VideoCapture(0)  # 0은 기본 웹캠
@@ -45,11 +52,12 @@ while cap.isOpened():
         break
 
     # 분류 실행
-    predicted_class = classify_image(frame)
+    predicted_class, confidence = classify_image(frame)
 
-    # 화면에 표시
-    cv2.putText(frame, f"Class: {predicted_class}", (50, 50),
-                cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+    # 정확도가 0.8 이상일 때만 화면에 표시
+    if confidence >= 0.8:
+        cv2.putText(frame, f"Class: {predicted_class} ({confidence:.2f})", (50, 50),
+                    cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
     cv2.imshow("Live Classification", frame)
 
