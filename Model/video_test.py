@@ -1,3 +1,4 @@
+#웹캠 사용
 #확률 계산 방식(softmax 후 probabilities[0][preds.item()].item() 사용)
 #분류 결과 반환((class_names[preds.item()], confidence))
 #확률이 0.8 미만일 때(여전히 클래스 예측을 수행하나 화면에 표시 안 함)
