@@ -1,3 +1,4 @@
+#웹캠 사용
 #확률 계산 방식(torch.max(probabilities, 1) 사용)
 #분류 결과 반환((class_names[preds.item()], max_prob.item()) if max_prob.item() >= 0.8 else (None, None))
 #확률이 0.8 미만일 때(아예 None을 반환하여 화면 출력 제외)
