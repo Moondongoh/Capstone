@@ -21,7 +21,7 @@ def select_member():
     members = ["대원 1", "대원 2", "대원 3", "대원 4"]
     return render_template("select_member.html", members=members)
 
-# 웹캠 스트리밍 함수
+# 웹캠 스트리밍 함수(대원 1을 선택할 시 웹캠 스트리밍 페이지로 이동)
 def generate_frames():
     camera = cv2.VideoCapture(0)  # 0번 카메라 사용
     while True:
