@@ -49,6 +49,33 @@ body {
     text-align: center;
 }
 
+.member-button, .member-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    background-color: white; /* 버튼 배경 흰색 */
+    cursor: pointer;
+    text-align: center;
+    color: black; /* 글씨색 검정 */
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.member-button:hover, .member-input:hover {
+    background-color: #f0f0f0; /* 마우스 올리면 연한 회색 */
+}
+
+.member-button:active, .member-input:active {
+    background-color: #ddd; /* 클릭 시 살짝 어두운 회색 */
+}
+
+.member-input {
+    pointer-events: none; /* input을 비활성화해서 버튼처럼 보이게 함 */
+}
+
+
+
 /* 톱니바퀴 아이콘 버튼을 우측 하단에 배치 */
 #editButton {
     position: absolute;
