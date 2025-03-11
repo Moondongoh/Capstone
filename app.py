@@ -21,7 +21,8 @@ class ResNetModel(torch.nn.Module):
         super(ResNetModel, self).__init__()
         self.model = models.resnet50(weights=None)  # 최신 방식
         self.model.fc = torch.nn.Linear(self.model.fc.in_features, len(class_names))  # 클래스 개수 설정
-        model_path = r"C:\Github\Capstone\body_parts_resnet50.pth"
+        model_path = r"C:\Users\Moon\Desktop\body_parts_resnet50.pth" #학교
+        #model_path = r"C:\Github\Capstone\body_parts_resnet50.pth" ##집
         self.model.load_state_dict(torch.load(model_path, map_location=device))
         self.model.to(device)
         self.model.eval()
@@ -62,7 +63,7 @@ def select_member():
 
 # 웹캠 스트리밍 함수 (바운딩 박스 + 확률 0.9 이상 필터링)
 def generate_frames():
-    camera = cv2.VideoCapture(0)  # 0번 카메라 사용
+    camera = cv2.VideoCapture(1)  # 0번 카메라 사용 집에서 1 학교에서 OBS는 1
     while camera.isOpened():
         success, frame = camera.read()
         if not success:

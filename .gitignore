@@ -10,6 +10,9 @@ __pycache__/
 # .pth 파일 제외
 *.pth
 
+# .pt 파일 제외
+*.pt
+
 # C extensions
 *.so
 
