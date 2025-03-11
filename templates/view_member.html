@@ -4,10 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>대원 1 실시간 영상</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        img {
+            max-width: 90%; /* 화면 너비의 90%까지 확장 */
+            max-height: 80vh; /* 화면 높이의 80%까지 확장 */
+            height: auto;
+            border: 2px solid black;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 18px;
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <h1>대원 1 실시간 영상</h1>
-    <img src="{{ url_for('stream') }}" width="640" height="480">
+    <img src="{{ url_for('stream') }}">
     <br>
     <a href="/select_member">돌아가기</a>
 </body>
