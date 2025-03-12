@@ -21,7 +21,7 @@ class ResNetModel(torch.nn.Module):
         super(ResNetModel, self).__init__()
         self.model = models.resnet50(weights=None)  # 최신 방식
         self.model.fc = torch.nn.Linear(self.model.fc.in_features, len(class_names))  # 클래스 개수 설정
-        model_path = r"C:\Users\Moon\Desktop\body_parts_resnet50.pth" #학교
+        #model_path = r"C:\Users\Moon\Desktop\body_parts_resnet50.pth" #학교
         #model_path = r"C:\Github\Capstone\body_parts_resnet50.pth" ##집
         self.model.load_state_dict(torch.load(model_path, map_location=device))
         self.model.to(device)
