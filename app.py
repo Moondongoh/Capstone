@@ -12,7 +12,7 @@ app = Flask(__name__)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
 
-# 클래스 이름 (모델 학습 시 사용한 순서대로)
+# 클래스 이름 (모델 학습 시 사용한 순서대로) testsetsetsetse
 class_names = ['Belly', 'Ear', 'Elbow', 'Eye', 'Foot', 'Hand', 'Knee', 'Neck', 'Nose', 'Shoulders']
 
 # 모델 로드
