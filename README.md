@@ -55,6 +55,7 @@ python real_time_inference.py
 CCTV 선택 → 실시간 탐지 → 로그 확인 가능
 
 📂 파일 구조
+```
 .
 ├── Code/
 │   ├── data.yaml              # 데이터셋 정의
@@ -81,6 +82,7 @@ CCTV 선택 → 실시간 탐지 → 로그 확인 가능
 │   ├── launch.json            # VSCode 디버깅 설정
 │   └── settings.json          # Python 환경 설정
 └── README.md
+```
 
 🛠️ 기술 스택
 
