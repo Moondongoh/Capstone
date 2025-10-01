@@ -186,3 +186,7 @@ safety_model_results
 runs
 
 instance
+
+*.db
+
+*.db.bak
