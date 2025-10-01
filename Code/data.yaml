@@ -1,0 +1,10 @@
+# data.yaml
+
+train: r"C:\GIT\Capstone\Dataset\train\images"
+val: r"C:\GIT\Capstone\Dataset\val\images"
+
+nc: 5
+
+# 0: fall, 1: not fall, 2: helmet, 3: vest, 4: no_helmet 
+
+names: ['fall', 'not_fall', 'helmet', 'vest', 'no_helmet']
