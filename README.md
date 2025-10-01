@@ -57,16 +57,16 @@ CCTV 선택 → 실시간 탐지 → 로그 확인 가능
 📂 파일 구조
 .
 ├── Code/
-│   ├── data.yaml                # 데이터셋 정의
-│   ├── train.py                 # YOLOv8 학습
-│   ├── inference.py             # 성능 검증
-│   ├── detection_save_img.py    # 무작위 이미지 추론 저장
-│   ├── devide.py                # train/val 데이터 분할
-│   ├── update_labels.py         # 라벨 ID 수정
-│   ├── real_time_inference.py   # 실시간 웹캠 감지
-│   ├── detector.py              # YOLO 감지 모듈
-│   ├── tree.py                  # 폴더 구조 출력
-│   ├── templates/               # Flask HTML 템플릿
+│   ├── data.yaml              # 데이터셋 정의
+│   ├── train.py               # YOLOv8 학습
+│   ├── inference.py           # 성능 검증
+│   ├── detection_save_img.py  # 무작위 이미지 추론 저장
+│   ├── devide.py              # train/val 데이터 분할
+│   ├── update_labels.py       # 라벨 ID 수정
+│   ├── real_time_inference.py # 실시간 웹캠 감지
+│   ├── detector.py            # YOLO 감지 모듈
+│   ├── tree.py                # 폴더 구조 출력
+│   ├── templates/             # Flask HTML 템플릿
 │   │   ├── home.html
 │   │   ├── signup.html
 │   │   ├── cctv_select.html
@@ -74,12 +74,12 @@ CCTV 선택 → 실시간 탐지 → 로그 확인 가능
 │   │   ├── login.html
 │   │   ├── logs.html
 │   │   ├── base.html
-│   │   ├── about.html
-│   ├── static/
-│   │   └── site.css             # 웹 스타일시트
+│   │   └── about.html
+│   └── static/
+│       └── site.css           # 웹 스타일시트
 ├── .vscode/
-│   ├── launch.json              # VSCode 디버깅 설정
-│   ├── settings.json            # Python 환경 설정
+│   ├── launch.json            # VSCode 디버깅 설정
+│   └── settings.json          # Python 환경 설정
 └── README.md
 
 🛠️ 기술 스택
