@@ -1,17 +1,0 @@
-{% extends "base.html" %}
-{% block content %}
-<div class="auth-center">
-  <div class="auth-card">
-    <div class="auth-icon" aria-hidden="true">👷‍♂️</div>
-    <h2 class="auth-title">로그인</h2>
-    <form method="post" class="auth-form">
-      <label for="username">아이디</label>
-      <input id="username" name="username" required>
-      <label for="password">비밀번호</label>
-      <input id="password" name="password" type="password" required>
-      <button type="submit" class="btn-primary">로그인</button>
-    </form>
-    <p class="muted">아직 계정이 없나요? <a href="{{ url_for('signup') }}">회원가입</a></p>
-  </div>
-</div>
-{% endblock %}

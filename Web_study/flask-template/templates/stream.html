@@ -1,6 +1,0 @@
-{% extends "base.html" %}
-{% block content %}
-<h2>{{ camera.name }} - 실시간 스트림</h2>
-<img id="stream-img" src="{{ url_for('video_feed', camera_id=camera.id) }}" data-camera-id="{{ camera.id }}" style="max-width:100%; border:1px solid #ccc;">
-<p><a href="{{ url_for('logs') }}">탐지 로그 보기</a></p>
-{% endblock %}
