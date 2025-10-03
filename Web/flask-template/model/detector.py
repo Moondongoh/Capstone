@@ -15,7 +15,7 @@ class Detector:
 
     def __init__(
         self,
-        weights: str = r"C:\GIT\Capstone\Web_study\flask-template\weights\best.pt",
+        weights: str = r"C:\GIT\Capstone\Web\flask-template\weights\best.pt",
         conf: float = 0.5,
         device: Optional[str] = None,
     ):
