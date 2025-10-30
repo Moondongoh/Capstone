@@ -38,6 +38,9 @@ db = SQLAlchemy(app)
 login_manager = LoginManager(app)
 login_manager.login_view = "login"
 
+OUT_W = int(os.getenv("STREAM_OUT_WIDTH", "0"))
+OUT_H = int(os.getenv("STREAM_OUT_HEIGHT", "0"))
+
 
 # ---------- 모델 ----------
 class User(db.Model, UserMixin):
