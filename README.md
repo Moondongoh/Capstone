@@ -37,6 +37,17 @@ CCTV 선택 화면 (cctv_select.html)
 
 기본 정보 페이지 (about.html)
 
+<div align=center> 
+<img src="https://github.com/user-attachments/assets/faa0b405-7153-460a-89bc-cb544d03e3f3" width="600" height="600" ></img><br/>
+<시스템 구성도>
+</div>
+
+<div align=center> 
+<img src="https://github.com/user-attachments/assets/15db4668-1028-4f41-986c-888c8c06aa85" width="600" height="600" ></img><br/>
+<모델을 활용한 객체 탐지 결과>
+</div>
+
+
 ▶️ 실행 방법
 1. 모델 학습
 python train.py
